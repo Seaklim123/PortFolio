@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <!-- Font Awesome for icons (if you use any in project cards) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Global styles -->
+    <link rel="stylesheet" href="../css/HomeStyle.js" />
+    <!-- Navigation specific styles -->
+    <link rel="stylesheet" href="../css/NavBar.css" />
+    <!-- Project page specific styles -->
+    <link rel="stylesheet" href="../css/Project.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger" onclick="hamburg()">☰</button>
+
+            <!-- Navigation links (desktop only) -->
+            <ul class="nav-links">
+                <li><a href="HomePage.html">Online Portfolio</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="Project.html" class="active">Project</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Dropdown (mobile only) -->
+            <div class="dropdown">
+                <div class="links">
+                    <a href="HomePage.html">Online Portfolio</a>
+                    <a href="AboutMe.html">About Me</a>
+                    <a href="Education.html">Education</a>
+                    <a href="Experience.html">Experience</a>
+                    <a href="Project.html">Project</a>
+                    <a href="Contact.html">Contact</a>
+                    <button onclick="cancel()">Close</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="projects-page">
+            <h2>My Projects</h2>
+
+            <section class="project-grid">
+                <!-- School Project: Online Short Course -->
+                <div class="project-item">
+                    <img src="https://placehold.co/400x200/4da8da/ffffff?text=Online+Course" alt="Online Short Course Platform">
+                    <div class="project-details">
+                        <h3>Online Short Course Platform</h3>
+                        <p class="description">
+                            A web-based platform providing high-quality IT lessons in Khmer language, with both video and document resources to enhance IT skills.
+                        </p>
+                        <ul class="features">
+                            <li>Developed: Login, Register, Admin Dashboard</li>
+                        </ul>
+                        <a href="#" class="view-project-button">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project: Efficient Book Stock Tracking -->
+                <div class="project-item">
+                    <img src="https://placehold.co/400x200/3b90c5/ffffff?text=Book+Stock" alt="Book Stock Tracking System">
+                    <div class="project-details">
+                        <h3>Efficient Book Stock Tracking</h3>
+                        <p class="description">
+                            Developed for efficient tracking of book stock, ensuring accurate updates on book availability in store.
+                        </p>
+                        <ul class="features">
+                            <li>Developed: Home page, Login, Register, Menu</li>
+                        </ul>
+                        <a href="#" class="view-project-button">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project: Movie Platform -->
+                <div class="project-item">
+                    <img src="https://placehold.co/400x200/2c3e50/ffffff?text=Movie+Platform" alt="Movie Platform">
+                    <div class="project-details">
+                        <h3>Movie Platform</h3>
+                        <p class="description">
+                            Developed a movie platform that allows users to easily surf through many popular and newly released movies for free.
+                        </p>
+                        <ul class="features">
+                            <li>Developed: Home button, Menu bar, Search function</li>
+                        </ul>
+                        <a href="#" class="view-project-button">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Add more project items as needed -->
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>PORTOFOLIO 2026</p>
+        </footer>
+    </div>
+
+    <script src="../Javascript/Home.js"></script>
+</body>
+</html>
+

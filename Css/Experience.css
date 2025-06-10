@@ -1,0 +1,188 @@
+/* Experience Page Specific Styles */
+.experience-page { /* Class changed */
+    flex-grow: 1;
+    padding: 50px 30px; /* Increased padding */
+    max-width: 1100px; /* Increased max-width */
+    margin: 40px auto;
+    background-color: #e6f2f8; /* Light blue background for the content area */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    text-align: center; /* Center main heading */
+}
+
+.experience-page h2 { /* Class changed */
+    font-size: 3em; /* Increased font size */
+    color: #3b90c5; /* Deep blue title */
+    margin-bottom: 50px; /* Increased margin */
+    font-weight: bold;
+}
+
+.experience-grid { /* Class changed */
+    display: grid;
+    /* Adjusted minmax for larger cards, maintaining 2 columns on larger screens */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px; /* Increased gap */
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.experience-item { /* Class changed */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item:hover { /* Class changed */
+    transform: translateY(-7px); /* More pronounced lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+}
+
+.experience-item img { /* Class changed */
+    width: 100%;
+    height: 240px; /* Increased fixed height for larger card images */
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #4da8da;
+}
+
+.experience-item .experience-details { /* Class changed */
+    padding: 25px; /* Increased padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item h3 { /* Class changed */
+    font-size: 1.6em; /* Increased font size */
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.experience-item .company { /* New class for company name */
+    font-size: 1.1em; /* Increased font size */
+    color: #4da8da;
+    margin-bottom: 8px; /* Increased margin */
+    font-weight: 600;
+}
+
+.experience-item .dates { /* New class for dates */
+    font-size: 1em; /* Increased font size */
+    color: #777777;
+    font-style: italic;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.experience-item .description { /* Class changed */
+    font-size: 1.05em; /* Increased font size */
+    color: #555555;
+    line-height: 1.7; /* Adjusted line height */
+    margin-bottom: 20px; /* Increased margin */
+    flex-grow: 1;
+}
+
+.experience-item .responsibilities { /* Class changed */
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 1em; /* Increased font size */
+    color: #3b90c5;
+}
+
+.experience-item .responsibilities li { /* Class changed */
+    margin-bottom: 8px; /* Increased margin */
+    position: relative;
+    padding-left: 20px; /* Increased space for custom bullet */
+}
+
+.experience-item .responsibilities li::before { /* Class changed */
+    content: '•';
+    color: #4da8da;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Bigger bullet */
+    top: 0; /* Align bullet to top of text */
+}
+
+.experience-item .view-experience-button { /* Class changed */
+    display: inline-block;
+    background-color: #4da8da;
+    color: #ffffff;
+    padding: 12px 25px; /* Increased padding */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em; /* Increased font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: center;
+    margin-top: auto;
+}
+
+.experience-item .view-experience-button:hover { /* Class changed */
+    background-color: #3b90c5;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for experience page */
+@media (max-width: 768px) {
+    .experience-page { /* Class changed */
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+    .experience-page h2 { /* Class changed */
+        font-size: 2.5em; /* Adjusted for mobile */
+        margin-bottom: 30px;
+    }
+    .experience-grid { /* Class changed */
+        grid-template-columns: 1fr; /* Stack experience items vertically on mobile (single column) */
+        padding: 0;
+    }
+    .experience-item { /* Class changed */
+        text-align: center; /* Center content in stacked items */
+    }
+    .experience-item .responsibilities li { /* Class changed */
+        padding-left: 0;
+        text-align: center;
+    }
+    .experience-item .responsibilities li::before { /* Class changed */
+        display: none; /* Hide custom bullet on mobile if centering */
+    }
+    .experience-item .view-experience-button { /* Class changed */
+        width: 80%; /* Make button wider on mobile */
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .experience-item img {
+        height: 200px; /* Adjust image height for mobile */
+    }
+    .experience-item .experience-details {
+        padding: 20px;
+    }
+    .experience-item h3 {
+        font-size: 1.4em;
+    }
+    .experience-item .company {
+        font-size: 0.95em;
+    }
+    .experience-item .dates {
+        font-size: 0.85em;
+    }
+    .experience-item .description,
+    .experience-item .responsibilities {
+        font-size: 0.9em;
+    }
+}
+
+/* Enforce 2 columns on tablets (larger than mobile, smaller than desktop) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force 2 columns on tablets */
+    }
+}

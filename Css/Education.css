@@ -1,0 +1,188 @@
+/* --- EDUCATION & CERTIFICATES PAGE SPECIFIC STYLES --- */
+        .education-certificates-page {
+            flex-grow: 1;
+            padding: 100px 80px; /* Further increased padding */
+            max-width: 1100px; /* Further increased max-width */
+            margin: 40px auto;
+            background-color: #e6f2f8; /* Light blue background for the content area */
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            color: #1a1a1a;
+        }
+
+        .education-certificates-page h2 {
+            font-size: 3.5em; /* Further increased font size */
+            color: #3b90c5; /* Deep blue title */
+            margin-bottom: 50px; /* Further increased margin */
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Education List (for static education entries) */
+        .education-list {
+            margin-top: 60px; /* Further increased margin */
+            margin-bottom: 70px; /* Further increased space before certificates */
+            border-bottom: 1px solid #cccccc; /* Separator for education and certificates */
+            padding-bottom: 50px; /* Further increased padding */
+        }
+
+        .education-list h3 {
+            font-size: 2.2em; /* Further increased font size */
+            color: #2c3e50;
+            margin-bottom: 30px; /* Further increased margin */
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .education-item-display {
+            background-color: #ffffff;
+            padding: 35px; /* Further increased padding */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            margin-bottom: 30px; /* Further increased margin */
+            border-left: 7px solid #4da8da; /* Slightly thicker border */
+            position: relative;
+        }
+
+        .education-item-display h3 {
+            font-size: 1.9em; /* Further increased font size */
+            color: #2c3e50;
+            margin-bottom: 10px; /* Further increased margin */
+        }
+
+        .education-item-display p {
+            font-size: 1.2em; /* Further increased font size */
+            color: #555555;
+            line-height: 1.7; /* Adjusted line height */
+            margin-bottom: 10px; /* Further increased margin */
+        }
+
+        .education-item-display .dates {
+            font-size: 1.1em; /* Further increased font size */
+            color: #777777;
+            font-style: italic;
+            margin-bottom: 25px; /* Further increased margin */
+        }
+
+        /* Certificate Section Styles */
+        .certificates-section {
+            padding-top: 50px; /* Further increased padding */
+        }
+
+        .certificates-section h3 {
+            font-size: 2.2em; /* Further increased font size */
+            color: #2c3e50;
+            margin-bottom: 35px; /* Further increased margin */
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased minmax for larger cards */
+            gap: 35px; /* Further increased gap */
+            justify-content: center;
+        }
+
+        .certificate-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .certificate-item:hover {
+            transform: translateY(-8px); /* More pronounced lift */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        }
+
+        .certificate-item img {
+            width: 100%;
+            height: 240px; /* Further increased fixed height for larger card images */
+            object-fit: cover;
+            display: block;
+        }
+
+        .certificate-item .certificate-details {
+            padding: 25px; /* Further increased padding */
+        }
+
+        .certificate-item h4 {
+            font-size: 1.4em; /* Further increased font size */
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .certificate-item p {
+            font-size: 1.1em; /* Further increased font size */
+            color: #555555;
+            margin-bottom: 25px; /* Further increased margin */
+        }
+
+        .certificate-item .view-button {
+            display: inline-block;
+            background-color: #4da8da;
+            color: #ffffff;
+            padding: 12px 25px; /* Further increased padding */
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em; /* Further adjusted font size */
+            transition: background-color 0.3s ease;
+        }
+
+        .certificate-item .view-button:hover {
+            background-color: #3b90c5;
+        }
+
+        /* Responsive adjustments for overall page */
+        @media (max-width: 600px) {
+            .education-certificates-page {
+                padding: 30px 15px;
+                margin: 20px auto;
+            }
+            .education-certificates-page h2 {
+                font-size: 2.5em; /* Adjusted for mobile */
+                margin-bottom: 30px;
+            }
+            .education-list h3,
+            .certificates-section h3 {
+                font-size: 1.9em; /* Adjusted for mobile */
+                margin-bottom: 25px;
+            }
+            .education-item-display {
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+            .education-item-display h3 {
+                font-size: 1.6em;
+            }
+            .education-item-display p {
+                font-size: 1em;
+            }
+            .education-item-display .dates {
+                font-size: 0.9em;
+            }
+            .certificate-grid {
+                grid-template-columns: 1fr; /* Stack certificates on very small screens */
+                gap: 25px;
+            }
+            .certificate-item img {
+                height: 200px; /* Adjusted height for smaller screens */
+            }
+            .certificate-item .certificate-details {
+                padding: 20px;
+            }
+            .certificate-item h4 {
+                font-size: 1.2em;
+            }
+            .certificate-item p {
+                font-size: 1em;
+            }
+            .certificate-item .view-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }

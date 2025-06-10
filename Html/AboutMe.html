@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="../css/AboutMe.css" />
+    <link rel="stylesheet" href="../css/NavBar.css" />
+    <script src="../Javascript/Home.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <button class="hamburger" onclick="hamburg()">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="HomePage.html">Online Portfolio</a></li>
+                <li><a href="AboutMe.html" class="active">About Me</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="Project.html">Project</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <div class="dropdown">
+                <div class="links">
+                    <a href="HomePage.html">Online Portfolio</a>
+                    <a href="AboutMe.html">About Me</a>
+                    <a href="Education.html">Education</a>
+                    <a href="Experience.html">Experience</a>
+                    <a href="Project.html">Project</a>
+                    <a href="Contact.html">Contact</a>
+                    <button onclick="cancel()">Close</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="about-me">
+            <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>
+                I am a Full Stack Web Developer with a passion for creating dynamic and responsive web applications.
+                My journey in web development began with a curiosity for how websites work, and it has evolved into a full-fledged career.
+                </p>
+                <p>
+                I have experience working with technologies like HTML, CSS, JavaScript, React, and Node.js.
+                I love solving challenges and learning continuously.
+                </p>
+                <p>
+                Outside of coding, I enjoy exploring new tools, contributing to open-source, and mentoring others in the tech community.
+                </p>
+            </div>
+
+            <div class="photo">
+                <img src="../Asset/profile.JPG" alt="Profile Photo" />
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>PORTOFOLIO 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

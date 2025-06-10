@@ -1,0 +1,158 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b1d4e0; /* soft blue background */
+    color: #1a1a1a;
+}
+
+.container {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* To push hamburger to one side and nav links to another */
+    align-items: center;
+    padding: 10px 0;
+    position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+/* Default state for nav-links (desktop) */
+.nav-links {
+    display: flex; /* Show by default for desktop */
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: #4da8da;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    text-align: right;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    color: #555555;
+    margin-top: 40px;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding: 10px;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: absolute;
+    top: 100%; /* Position it right below the navbar */
+    left: 0;
+    width: 100%;
+    /* Set the background to match your active/hover nav link color */
+    background-color: #ffffff; /* Changed from #333 */
+    transform: translateY(-100%); /* Start off-screen above */
+    transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    z-index: 999;
+    overflow: hidden;
+    max-height: 0;
+    /* Corrected rgba value for box-shadow, using a semi-transparent version of your active color */
+    box-shadow: 0 4px 8px rgba(77, 168, 218, 0.4); /* Example: based on #4da8da */
+    border-bottom-left-radius: 6px; /* Match nav link border-radius */
+    border-bottom-right-radius: 6px;
+}
+
+.dropdown.open {
+    transform: translateY(0); /* Slide in */
+    max-height: 500px; /* Adjust as needed to show all links */
+}
+
+.dropdown .links {
+    padding: 10px 0;
+}
+
+.dropdown .links a {
+    color: #1a1a1a;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    background-color: #ffffff; /* Override the navbar a background */
+    box-shadow: none; /* Remove box-shadow for dropdown links */
+    border-radius: 0; /* Remove border-radius for dropdown links */
+}
+
+.dropdown .links a:hover,
+.dropdown .links a.active {
+    background-color: #4da8da; /* Blue background on hover/active */
+    color: #ffffff; /* White text on hover/active */
+}
+
+
+.dropdown .links button {
+    display: block;
+    margin: 20px auto; /* Centering the close button */
+    padding: 10px 25px;
+    border: none;
+    background-color: #4da8da; /* Red color for close button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown .links button:hover {
+    background-color: #4da8da;
+}
+
+/* Mobile-specific styles for Navbar and Dropdown */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide desktop nav links on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button on mobile */
+    }
+}
+
+/* IMPORTANT: Ensure the dropdown is hidden on desktop by default if it's not opened by JS */
+/* This rule is technically redundant with `max-height: 0` but good for clarity */
+@media (min-width: 769px) {
+    .dropdown {
+        display: none; /* Fully hide dropdown on desktop */
+    }
+}

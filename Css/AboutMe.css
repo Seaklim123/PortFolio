@@ -1,0 +1,76 @@
+.about-me {
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #e6f2f8; /* soft blue background */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+  color: #1a1a1a;
+}
+
+.about-me-text {
+  flex: 1;
+}
+
+.about-me h2 {
+  font-size: 36px;
+  color: #3b90c5; /* deep blue title */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-me p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.about-me .photo {
+  flex-shrink: 0; /* Prevents the image from shrinking too much */
+}
+
+.about-me .photo img {
+  max-width: 250px;
+  height: auto; /* Ensure aspect ratio is maintained */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  border: 4px solid #4da8da; /* subtle blue border */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center; /* Center align text */
+    padding: 30px; /* Slightly less padding on mobile */
+    gap: 30px; /* Adjust gap for vertical stacking */
+  }
+
+  .about-me-text {
+    flex: none; /* Remove flex-grow on text for mobile */
+    width: 100%; /* Ensure text takes full width */
+  }
+
+  .about-me .photo {
+    order: -1; /* Place the photo above the text on mobile */
+    margin-bottom: 20px; /* Add some space below the photo */
+  }
+
+  .about-me .photo img {
+    max-width: 180px; /* Smaller image on mobile */
+  }
+
+  .about-me h2 {
+    font-size: 28px; /* Smaller heading on mobile */
+  }
+
+  .about-me p {
+    font-size: 15px; /* Slightly smaller text on mobile */
+  }
+}

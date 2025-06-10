@@ -1,0 +1,150 @@
+/* Projects Page Specific Styles */
+.projects-page {
+    flex-grow: 1;
+    padding: 40px 20px;
+    max-width: 1200px; /* Wider than education page for more project space */
+    margin: 40px auto;
+    background-color: #e6f2f8; /* Light blue background for the content area */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    text-align: center; /* Center main heading */
+}
+
+.projects-page h2 {
+    font-size: 2.5em;
+    color: #3b90c5; /* Deep blue title */
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.project-grid {
+    display: grid;
+    /* Changed to always be 2 columns on larger screens */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px; /* Add some horizontal padding to the grid */
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures image corners are rounded */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text within project item */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack image and details vertically */
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent card size */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block; /* Removes extra space below image */
+    border-bottom: 3px solid #4da8da; /* Blue line under image */
+}
+
+.project-item .project-details {
+    padding: 20px;
+    flex-grow: 1; /* Allow details to take available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item h3 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-item .description {
+    font-size: 0.95em;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+.project-item .features {
+    list-style: none; /* Remove default list bullets */
+    padding-left: 0;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #3b90c5; /* Blue color for features */
+}
+
+.project-item .features li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px; /* Space for custom bullet */
+}
+
+.project-item .features li::before {
+    content: '•'; /* Custom bullet point */
+    color: #4da8da; /* Blue bullet */
+    position: absolute;
+    left: 0;
+}
+
+.project-item .view-project-button {
+    display: inline-block;
+    background-color: #4da8da;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: center; /* Center the button within its flex container */
+    margin-top: auto; /* Push button to the bottom if content varies */
+}
+
+.project-item .view-project-button:hover {
+    background-color: #3b90c5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for projects page */
+@media (max-width: 768px) {
+    .projects-page {
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+    .projects-page h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects vertically on mobile (single column) */
+        padding: 0;
+    }
+    .project-item {
+        text-align: center; /* Center content in stacked items */
+    }
+    .project-item .features li {
+        padding-left: 0;
+        text-align: center;
+    }
+    .project-item .features li::before {
+        display: none; /* Hide custom bullet on mobile if centering */
+    }
+    .project-item .view-project-button {
+        width: 80%; /* Make button wider on mobile */
+    }
+}
+
+/* New media query to enforce 2 columns on tablets (larger than mobile, smaller than desktop) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force 2 columns on tablets */
+    }
+}

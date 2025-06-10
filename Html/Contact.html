@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Vannak Seaklim</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Link to your general styles -->
+    <link rel="stylesheet" href="../css/NavBar.css" />
+    <!-- Link to your contact page specific styles -->
+    <link rel="stylesheet" href="../css/Contact.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger" onclick="hamburg()">☰</button>
+
+            <!-- Navigation links (desktop only) -->
+            <ul class="nav-links">
+                <li><a href="HomePage.html">Online Portfolio</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="Project.html">Project</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <!-- Dropdown (mobile only) -->
+            <div class="dropdown">
+                <div class="links">
+                    <a href="HomePage.html">Online Portfolio</a>
+                    <a href="AboutMe.html">About Me</a>
+                    <a href="Education.html">Education</a>
+                    <a href="Experience.html">Experience</a>
+                    <a href="Project.html">Project</a>
+                    <a href="Contact.html">Contact</a>
+                    <button onclick="cancel()">Close</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="contact-page">
+            <section class="contact-hero">
+                <h2>GET IN TOUCH</h2>
+                <p class="subtitle">Let's Work Together</p>
+            </section>
+
+            <section class="contact-info-grid">
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone & Mobile</h3>
+                    <p>+855 979 043 321</p> <!-- Example Cambodian number -->
+                    <p>+855 87 258 001</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email & Website</h3>
+                    <p>seaklimvannak@gmail.com</p>
+                    <p>yourportfolio.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p>@VannakSeaklim</p>
+                    <p>+855 979 043 321</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Seaklim Vannak</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Seaklim Vannak</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>seaklim123</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Bridge2, National Road 6A, Sangkat Prek Leap, Khan Chroy Changva, Phnom Penh</p>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>PORTOFOLIO 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for the mobile dropdown (hamburger menu)
+        function hamburg() {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.classList.add("open"); // Add 'open' class to show dropdown
+        }
+
+        function cancel() {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.classList.remove("open"); // Remove 'open' class to hide dropdown
+        }
+    </script>
+</body>
+</html>
