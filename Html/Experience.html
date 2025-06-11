@@ -1,120 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Experience - Vannak Seaklim</title>
-    <!-- Font Awesome for icons (if you use any in experience cards) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Global styles -->
-    <link rel="stylesheet" href="../css/HomeStyle.css" />
-    <!-- Navigation specific styles -->
-    <link rel="stylesheet" href="../css/NavBar.css" />
-    <!-- Experience page specific styles -->
-    <link rel="stylesheet" href="../css/Experience.css" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the professional experience of Vannak Seaklim, a Full Stack Web Developer with expertise in web platforms, inventory systems, and movie streaming apps.">
+  <meta name="author" content="Vannak Seaklim" />
+  <meta name="keywords" content="Web Developer, Experience, Portfolio, Projects, HTML, CSS, JavaScript" />
+  <title>Experience | Vannak Seaklim</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/HomeStyle.css" />
+  <link rel="stylesheet" href="../css/NavBar.css" />
+  <link rel="stylesheet" href="../css/Experience.css" />
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <!-- Hamburger button (mobile only) -->
-            <button class="hamburger" onclick="hamburg()">☰</button>
+  <div class="container">
+    <nav class="navbar">
+      <!-- Hamburger button (mobile) -->
+      <button class="hamburger" onclick="hamburg()">☰</button>
 
-            <!-- Navigation links (desktop only) -->
-            <ul class="nav-links">
-                <li><a href="HomePage.html">Online Portfolio</a></li>
-                <li><a href="AboutMe.html">About Me</a></li>
-                <li><a href="Education.html">Education</a></li>
-                <li><a href="Experience.html" class="active">Experience</a></li> <!-- Active link changed -->
-                <li><a href="Project.html">Project</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Online Portfolio</a></li>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="Experience.html" class="active">Experience</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Dropdown (mobile) -->
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Online Portfolio</a>
+          <a href="AboutMe.html">About Me</a>
+          <a href="Education.html">Education</a>
+          <a href="Experience.html">Experience</a>
+          <a href="Project.html">Projects</a>
+          <a href="Contact.html">Contact</a>
+          <button onclick="cancel()">Close</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="experience-page">
+      <h2>My Work Experience</h2>
+
+      <section class="experience-grid">
+
+        <!-- Experience 1 -->
+        <div class="experience-item">
+          <img src="https://placehold.co/400x200/4da8da/ffffff?text=School+Project" alt="Online Short Course Platform screenshot">
+          <div class="experience-details">
+            <h3>Web Developer (School Project)</h3>
+            <p class="company">Cambodia Academy of Digital Technology</p>
+            <p class="dates">September 2023 – February 2024</p>
+            <p class="description">
+              Developed a web-based platform providing high-quality IT lessons in Khmer, including video and document resources.
+            </p>
+            <ul class="responsibilities">
+              <li>Built login/register authentication system.</li>
+              <li>Created an admin dashboard for content control.</li>
+              <li>Enabled students to access IT learning materials easily.</li>
             </ul>
+            <a href="#" class="view-experience-button">View Details</a>
+          </div>
+        </div>
 
-            <!-- Dropdown (mobile only) -->
-            <div class="dropdown">
-                <div class="links">
-                    <a href="HomePage.html">Online Portfolio</a>
-                    <a href="AboutMe.html">About Me</a>
-                    <a href="Education.html">Education</a>
-                    <a href="Experience.html">Experience</a>
-                    <a href="Project.html">Project</a>
-                    <a href="Contact.html">Contact</a>
-                    <button onclick="cancel()">Close</button>
-                </div>
-            </div>
-        </nav>
+        <!-- Experience 2 -->
+        <div class="experience-item">
+          <img src="https://placehold.co/400x200/3b90c5/ffffff?text=Stock+System" alt="Book Stock Tracking System screenshot">
+          <div class="experience-details">
+            <h3>Inventory System Developer</h3>
+            <p class="company">Personal Project</p>
+            <p class="dates">March 2023 – July 2023</p>
+            <p class="description">
+              Built a book stock tracking system for real-time inventory management in a retail setting.
+            </p>
+            <ul class="responsibilities">
+              <li>Implemented stock management functions.</li>
+              <li>Developed homepage, login, and register features.</li>
+              <li>Designed easy-to-use navigation menus.</li>
+            </ul>
+            <a href="#" class="view-experience-button">View Details</a>
+          </div>
+        </div>
 
-        <main class="experience-page"> <!-- Class changed -->
-            <h2>My Work Experience</h2> <!-- Heading changed -->
+        <!-- Experience 3 -->
+        <div class="experience-item">
+          <img src="https://placehold.co/400x200/2c3e50/ffffff?text=Movie+App" alt="Movie Platform screenshot">
+          <div class="experience-details">
+            <h3>Frontend Developer (Movie Platform)</h3>
+            <p class="company">Personal Project</p>
+            <p class="dates">August 2022 – December 2022</p>
+            <p class="description">
+              Contributed to building a movie streaming platform with access to popular and new releases.
+            </p>
+            <ul class="responsibilities">
+              <li>Created UI components like homepage and menu.</li>
+              <li>Implemented movie search functionality.</li>
+              <li>Improved overall user experience design.</li>
+            </ul>
+            <a href="#" class="view-experience-button">View Details</a>
+          </div>
+        </div>
 
-            <section class="experience-grid"> <!-- Class changed -->
-                <!-- Experience Item 1: Online Short Course Platform Development (School Project Context) -->
-                <div class="experience-item"> <!-- Class changed -->
-                    <img src="https://placehold.co/400x200/4da8da/ffffff?text=School+Project" alt="Online Short Course Platform">
-                    <div class="experience-details"> <!-- Class changed -->
-                        <h3>Web Developer (School Project)</h3> <!-- Role/Title -->
-                        <p class="company">Cambodia Academy of Digital Technology</p> <!-- Company/Organization -->
-                        <p class="dates">September 2023 - February 2024</p> <!-- Dates -->
-                        <p class="description">
-                            Developed a web-based platform providing high-quality IT lessons in Khmer language, complete with video and document resources.
-                        </p>
-                        <ul class="responsibilities"> <!-- Class changed -->
-                            <li>Designed and implemented user authentication (login/register).</li>
-                            <li>Developed and managed the administrative dashboard for content control.</li>
-                            <li>Ensured accessibility for students to IT learning materials.</li>
-                        </ul>
-                        <a href="#" class="view-experience-button">View Details</a> <!-- Button changed -->
-                    </div>
-                </div>
+      </section>
+    </main>
 
-                <!-- Experience Item 2: Book Stock Tracking System -->
-                <div class="experience-item">
-                    <img src="https://placehold.co/400x200/3b90c5/ffffff?text=Stock+System" alt="Book Stock Tracking System">
-                    <div class="experience-details">
-                        <h3>Inventory System Developer</h3>
-                        <p class="company">[Company Name/Organization if applicable]</p>
-                        <p class="dates">March 2023 - July 2023</p>
-                        <p class="description">
-                            Developed an efficient system for tracking book stock, ensuring accurate and real-time updates on book availability within a retail environment.
-                        </p>
-                        <ul class="responsibilities">
-                            <li>Designed and implemented the core functionalities for stock management.</li>
-                            <li>Developed user-friendly interfaces including home page, login, and registration.</li>
-                            <li>Created intuitive navigation menus for easy system interaction.</li>
-                        </ul>
-                        <a href="#" class="view-experience-button">View Details</a>
-                    </div>
-                </div>
+    <footer class="footer">
+      <p>&copy; 2026 Vannak Seaklim. All rights reserved.</p>
+    </footer>
+  </div>
 
-                <!-- Experience Item 3: Movie Platform Development -->
-                <div class="experience-item">
-                    <img src="https://placehold.co/400x200/2c3e50/ffffff?text=Movie+App" alt="Movie Platform">
-                    <div class="experience-details">
-                        <h3>Frontend Developer (Movie Platform)</h3>
-                        <p class="company">[Company Name/Organization if applicable]</p>
-                        <p class="dates">August 2022 - December 2022</p>
-                        <p class="description">
-                            Contributed to the development of a movie streaming platform, enabling users to easily browse and access popular and newly released movies for free.
-                        </p>
-                        <ul class="responsibilities">
-                            <li>Implemented core UI features including home page, menu bar, and navigation.</li>
-                            <li>Developed robust search functionality for movie discovery.</li>
-                            <li>Focused on creating a smooth and intuitive user experience.</li>
-                        </ul>
-                        <a href="#" class="view-experience-button">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Add more experience items as needed -->
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>PORTOFOLIO 2026</p>
-        </footer>
-    </div>
-
-    <script src="../Javascript/Home.js"></script>
+  <script defer src="../Javascript/Home.js"></script>
 </body>
 </html>

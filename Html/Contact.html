@@ -1,9 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me - Vannak Seaklim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Me - Vannak Seaklim | Online Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Vannak Seaklim, a Software Engineer and Frontend Developer. Find contact info including phone, email, Telegram, Facebook, LinkedIn, GitHub, and address." />
+    <meta name="keywords" content="Vannak Seaklim, contact, software engineer, frontend developer, phone, email, Telegram, Facebook, LinkedIn, GitHub, Phnom Penh" />
+    <meta name="author" content="Vannak Seaklim" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="Contact Me - Vannak Seaklim" />
+    <meta property="og:description" content="Reach out to Vannak Seaklim via phone, email, or social media. Explore professional contact details." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourportfolio.com/Contact.html" />
+    <meta property="og:image" content="https://yourportfolio.com/images/profile.jpg" /> <!-- Replace with your real image URL -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Contact Me - Vannak Seaklim" />
+    <meta name="twitter:description" content="Reach out to Vannak Seaklim via phone, email, or social media." />
+    <meta name="twitter:image" content="https://yourportfolio.com/images/profile.jpg" /> <!-- Replace with your real image URL -->
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -11,109 +31,113 @@
     <link rel="stylesheet" href="../css/NavBar.css" />
     <!-- Link to your contact page specific styles -->
     <link rel="stylesheet" href="../css/Contact.css" />
-    
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <!-- Hamburger button (mobile only) -->
-            <button class="hamburger" onclick="hamburg()">☰</button>
+            <button class="hamburger" onclick="hamburg()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
 
             <!-- Navigation links (desktop only) -->
-            <ul class="nav-links">
+            <ul class="nav-links" id="desktop-menu">
                 <li><a href="HomePage.html">Online Portfolio</a></li>
                 <li><a href="AboutMe.html">About Me</a></li>
                 <li><a href="Education.html">Education</a></li>
                 <li><a href="Experience.html">Experience</a></li>
                 <li><a href="Project.html">Project</a></li>
-                <li><a href="Contact.html" class="active">Contact</a></li>
+                <li><a href="Contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
 
             <!-- Dropdown (mobile only) -->
-            <div class="dropdown">
+            <div class="dropdown" id="mobile-menu" role="menu" aria-hidden="true">
                 <div class="links">
-                    <a href="HomePage.html">Online Portfolio</a>
-                    <a href="AboutMe.html">About Me</a>
-                    <a href="Education.html">Education</a>
-                    <a href="Experience.html">Experience</a>
-                    <a href="Project.html">Project</a>
-                    <a href="Contact.html">Contact</a>
-                    <button onclick="cancel()">Close</button>
+                    <a href="HomePage.html" role="menuitem">Online Portfolio</a>
+                    <a href="AboutMe.html" role="menuitem">About Me</a>
+                    <a href="Education.html" role="menuitem">Education</a>
+                    <a href="Experience.html" role="menuitem">Experience</a>
+                    <a href="Project.html" role="menuitem">Project</a>
+                    <a href="Contact.html" role="menuitem">Contact</a>
+                    <button onclick="cancel()" aria-label="Close menu">Close</button>
                 </div>
             </div>
         </nav>
 
         <main class="contact-page">
-            <section class="contact-hero">
-                <h2>GET IN TOUCH</h2>
+            <section class="contact-hero" aria-labelledby="contact-title">
+                <h1 id="contact-title">Get in Touch</h1>
                 <p class="subtitle">Let's Work Together</p>
             </section>
 
-            <section class="contact-info-grid">
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+            <section class="contact-info-grid" aria-label="Contact Information">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Phone & Mobile</h3>
-                    <p>+855 979 043 321</p> <!-- Example Cambodian number -->
-                    <p>+855 87 258 001</p>
-                </div>
+                    <h2 itemprop="name">Phone & Mobile</h2>
+                    <p><a href="tel:+855979043321" itemprop="telephone">+855 979 043 321</a></p>
+                    <p><a href="tel:+85587258001" itemprop="telephone">+855 87 258 001</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Email & Website</h3>
-                    <p>seaklimvannak@gmail.com</p>
-                    <p>yourportfolio.com</p>
-                </div>
+                    <h2>Email & Website</h2>
+                    <p><a href="mailto:seaklimvannak@gmail.com" itemprop="email">seaklimvannak@gmail.com</a></p>
+                    <p><a href="https://yourportfolio.com" itemprop="url" target="_blank" rel="noopener noreferrer">yourportfolio.com</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fab fa-telegram"></i>
                     </div>
-                    <h3>Telegram</h3>
-                    <p>@VannakSeaklim</p>
-                    <p>+855 979 043 321</p>
-                </div>
+                    <h2>Telegram</h2>
+                    <p><a href="https://t.me/VannakSeaklim" target="_blank" rel="noopener noreferrer" itemprop="sameAs">@VannakSeaklim</a></p>
+                    <p><a href="tel:+855979043321" itemprop="telephone">+855 979 043 321</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fab fa-facebook"></i>
                     </div>
-                    <h3>Facebook</h3>
-                    <p>Seaklim Vannak</p>
-                </div>
+                    <h2>Facebook</h2>
+                    <p><a href="https://www.facebook.com/SeaklimVannak" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Seaklim Vannak</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fab fa-linkedin"></i>
                     </div>
-                    <h3>LinkedIn</h3>
-                    <p>Seaklim Vannak</p>
-                </div>
+                    <h2>LinkedIn</h2>
+                    <p><a href="https://www.linkedin.com/in/seaklimvannak" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Seaklim Vannak</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/Person">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fab fa-github"></i>
                     </div>
-                    <h3>GitHub</h3>
-                    <p>seaklim123</p>
-                </div>
+                    <h2>GitHub</h2>
+                    <p><a href="https://github.com/seaklim123" target="_blank" rel="noopener noreferrer" itemprop="sameAs">seaklim123</a></p>
+                </article>
 
-                <div class="contact-item">
-                    <div class="icon-wrapper">
+                <article class="contact-item" itemscope itemtype="https://schema.org/PostalAddress">
+                    <div class="icon-wrapper" aria-hidden="true">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Address</h3>
-                    <p>Bridge2, National Road 6A, Sangkat Prek Leap, Khan Chroy Changva, Phnom Penh</p>
-                </div>
+                    <h2>Address</h2>
+                    <p itemprop="streetAddress">Bridge2, National Road 6A, Sangkat Prek Leap</p>
+                    <p>
+                        <span itemprop="addressLocality">Khan Chroy Changva</span>, 
+                        <span itemprop="addressRegion">Phnom Penh</span>
+                    </p>
+                    <p itemprop="addressCountry">Cambodia</p>
+                </article>
 
             </section>
         </main>
 
-        <footer class="footer">
-            <p>PORTOFOLIO 2026</p>
+        <footer class="footer" role="contentinfo">
+            <p>PORTFOLIO 2026 &copy;</p>
         </footer>
     </div>
 
@@ -122,11 +146,15 @@
         function hamburg() {
             const dropdown = document.querySelector(".dropdown");
             dropdown.classList.add("open"); // Add 'open' class to show dropdown
+            dropdown.setAttribute('aria-hidden', 'false');
+            document.querySelector('.hamburger').setAttribute('aria-expanded', 'true');
         }
 
         function cancel() {
             const dropdown = document.querySelector(".dropdown");
             dropdown.classList.remove("open"); // Remove 'open' class to hide dropdown
+            dropdown.setAttribute('aria-hidden', 'true');
+            document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
         }
     </script>
 </body>

@@ -1,112 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
-    <link rel="stylesheet" href="../css/Education.css" />
-    <link rel="stylesheet" href="../css/NavBar.css" />
-    <script src="../Javascript/Home.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Education | Vannak Seaklim</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore the education background and certifications of Vannak Seaklim, a dedicated software engineering student with recognized certifications in web development, AWS, and JavaScript." />
+  <meta name="author" content="Vannak Seaklim" />
+  <meta name="keywords" content="Education, Certificates, Portfolio, Web Development, Software Engineering, Vannak Seaklim" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/Education.css" />
+  <link rel="stylesheet" href="../css/NavBar.css" />
+
+  <!-- Defer JavaScript for better performance -->
+  <script defer src="../Javascript/Home.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <!-- Hamburger button (mobile only) -->
-            <button class="hamburger" onclick="hamburg()">☰</button>
+  <div class="container">
+    <nav class="navbar">
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger" onclick="hamburg()">☰</button>
 
-            <!-- Navigation links (desktop only) -->
-            <ul class="nav-links">
-                <li><a href="HomePage.html">Online Portfolio</a></li>
-                <li><a href="AboutMe.html">About Me</a></li>
-                <li><a href="Education.html" class="active">Education</a></li>
-                <li><a href="Experience.html">Experience</a></li>
-                <li><a href="Project.html">Project</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
+      <!-- Navigation links (desktop only) -->
+      <ul class="nav-links">
+        <li><a href="HomePage.html">Online Portfolio</a></li>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Education.html" class="active">Education</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
 
-            <!-- Dropdown (mobile only) -->
-            <div class="dropdown">
-                <div class="links">
-                    <a href="HomePage.html">Online Portfolio</a>
-                    <a href="AboutMe.html">About Me</a>
-                    <a href="Education.html">Education</a>
-                    <a href="Experience.html">Experience</a>
-                    <a href="Project.html">Project</a>
-                    <a href="Contact.html">Contact</a>
-                    <button onclick="cancel()">Close</button>
-                </div>
+      <!-- Dropdown (mobile only) -->
+      <div class="dropdown">
+        <div class="links">
+          <a href="HomePage.html">Online Portfolio</a>
+          <a href="AboutMe.html">About Me</a>
+          <a href="Education.html">Education</a>
+          <a href="Experience.html">Experience</a>
+          <a href="Project.html">Project</a>
+          <a href="Contact.html">Contact</a>
+          <button onclick="cancel()">Close</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="education-certificates-page">
+      <h2>My Education & Certificates</h2>
+
+      <section class="education-list">
+        <h3>My Academic Background</h3>
+        <div class="education-item-display">
+          <h3>Bachelor of Computer Science Specialized in Software Engineering</h3>
+          <p>Cambodia Academy of Digital Technology - CADT</p>
+          <p class="dates">2023 - Present</p>
+        </div>
+      </section>
+
+      <section class="certificates-section" id="certificatesSection">
+        <h3>Certifications & Awards</h3>
+        <div class="certificate-grid">
+          <!-- Certificate Item 1 -->
+          <div class="certificate-item">
+            <img src="https://placehold.co/400x220/4da8da/ffffff?text=WebDev+Cert" alt="Web Development Certificate" />
+            <div class="certificate-details">
+              <h4>Full-Stack Web Development Certification</h4>
+              <p>Completed comprehensive training in MERN stack development.</p>
+              <a href="../Asset/certificate_webdev.pdf" download="WebDev_Certificate.pdf" class="view-button">View Certificate</a>
             </div>
-        </nav>
+          </div>
 
-        <main class="education-certificates-page">
-            <h2>My Education & Certificates</h2>
+          <!-- Certificate Item 2 -->
+          <div class="certificate-item">
+            <img src="https://placehold.co/400x220/3b90c5/ffffff?text=AWS+Cert" alt="AWS Cloud Practitioner Certificate" />
+            <div class="certificate-details">
+              <h4>AWS Cloud Practitioner</h4>
+              <p>Demonstrated foundational knowledge of AWS cloud services.</p>
+              <a href="../Asset/certificate_aws.pdf" download="AWS_Certificate.pdf" class="view-button">View Certificate</a>
+            </div>
+          </div>
 
-            <section class="education-list">
-                <h3>My Academic Background</h3>
-                <!-- Example Static Education Entry -->
-                <div class="education-item-display">
-                    <h3>Bachelor of Computer Science Specialized in Software Engineer</h3>
-                    <p>Cambodia Academy of Digital Technology - CADT</p>
-                    <p class="dates">2023 - Present</p>
-                    
-                </div>
-                <!-- Add more static education entries here if needed -->
-            </section>
+          <!-- Certificate Item 3 -->
+          <div class="certificate-item">
+            <img src="https://placehold.co/400x220/2c3e50/ffffff?text=JS+Cert" alt="JavaScript Advanced Certificate" />
+            <div class="certificate-details">
+              <h4>Advanced JavaScript Course Completion</h4>
+              <p>Mastered advanced JavaScript concepts and ES6 features.</p>
+              <a href="../Asset/certificate_js.pdf" download="JS_Certificate.pdf" class="view-button">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <section class="certificates-section" id="certificatesSection">
-                <h3>Certifications & Awards</h3>
-                <div class="certificate-grid">
-                    <!-- Example Certificate Item 1 -->
-                    <div class="certificate-item">
-                        <img src="https://placehold.co/400x220/4da8da/ffffff?text=WebDev+Cert" alt="Web Development Certificate">
-                        <div class="certificate-details">
-                            <h4>Full-Stack Web Development Certification</h4>
-                            <p>Completed comprehensive training in MERN stack development.</p>
-                            <a href="../Asset/certificate_webdev.pdf" download="WebDev_Certificate.pdf" class="view-button">View Certificate</a>
-                        </div>
-                    </div>
+    <footer class="footer">
+      <p>&copy; 2026 Vannak Seaklim. All rights reserved.</p>
+    </footer>
+  </div>
 
-                    <!-- Example Certificate Item 2 -->
-                    <div class="certificate-item">
-                        <img src="https://placehold.co/400x220/3b90c5/ffffff?text=AWS+Cert" alt="AWS Cloud Practitioner Certificate">
-                        <div class="certificate-details">
-                            <h4>AWS Cloud Practitioner</h4>
-                            <p>Demonstrated foundational knowledge of AWS cloud services.</p>
-                            <a href="../Asset/certificate_aws.pdf" download="AWS_Certificate.pdf" class="view-button">View Certificate</a>
-                        </div>
-                    </div>
+  <!-- Dropdown logic (can stay here or in Home.js if shared) -->
+  <script>
+    function hamburg() {
+      document.querySelector(".dropdown").classList.add("open");
+    }
 
-                    <!-- Example Certificate Item 3 -->
-                    <div class="certificate-item">
-                        <img src="https://placehold.co/400x220/2c3e50/ffffff?text=JS+Cert" alt="JavaScript Advanced Certificate">
-                        <div class="certificate-details">
-                            <h4>Advanced JavaScript Course Completion</h4>
-                            <p>Mastered advanced JavaScript concepts and ES6 features.</p>
-                            <a href="../Asset/certificate_js.pdf" download="JS_Certificate.pdf" class="view-button">View Certificate</a>
-                        </div>
-                    </div>
-
-                    <!-- Add more certificate items as needed -->
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>PORTOFOLIO 2026</p>
-        </footer>
-    </div>
-
-    <script>
-        // JavaScript for the mobile dropdown (hamburger menu)
-        function hamburg() {
-            const dropdown = document.querySelector(".dropdown");
-            dropdown.classList.add("open"); // Add 'open' class to show dropdown
-        }
-
-        function cancel() {
-            const dropdown = document.querySelector(".dropdown");
-            dropdown.classList.remove("open"); // Remove 'open' class to hide dropdown
-        }
-    </script>
+    function cancel() {
+      document.querySelector(".dropdown").classList.remove("open");
+    }
+  </script>
 </body>
 </html>

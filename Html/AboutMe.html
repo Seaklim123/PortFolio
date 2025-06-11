@@ -2,27 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-    <link rel="stylesheet" href="../css/AboutMe.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Learn more about Vannak Seaklim, a passionate frontend web developer." />
+    <title>About Me | Vannak Seaklim</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/NavBar.css" />
-    <script src="../Javascript/Home.js"></script>
+    <link rel="stylesheet" href="../css/AboutMe.css" />
+
+    <!-- JavaScript -->
+    <script src="../Javascript/Home.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
-            <button class="hamburger" onclick="hamburg()">☰</button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <button class="hamburger" onclick="hamburg()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="desktop-menu">
                 <li><a href="HomePage.html">Online Portfolio</a></li>
-                <li><a href="AboutMe.html" class="active">About Me</a></li>
+                <li><a href="AboutMe.html" class="active" aria-current="page">About Me</a></li>
                 <li><a href="Education.html">Education</a></li>
                 <li><a href="Experience.html">Experience</a></li>
                 <li><a href="Project.html">Project</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
 
-            <div class="dropdown">
+            <div class="dropdown" id="mobile-menu" aria-hidden="true">
                 <div class="links">
                     <a href="HomePage.html">Online Portfolio</a>
                     <a href="AboutMe.html">About Me</a>
@@ -30,34 +35,34 @@
                     <a href="Experience.html">Experience</a>
                     <a href="Project.html">Project</a>
                     <a href="Contact.html">Contact</a>
-                    <button onclick="cancel()">Close</button>
+                    <button onclick="cancel()" aria-label="Close menu">Close</button>
                 </div>
             </div>
         </nav>
 
-        <main class="about-me">
-            <div class="about-me-text">
-                <h2>About Me</h2>
+        <main class="about-me" role="main">
+            <section class="about-me-text" aria-labelledby="about-me-title">
+                <h1 id="about-me-title">About Me</h1>
                 <p>
-                I am a Full Stack Web Developer with a passion for creating dynamic and responsive web applications.
-                My journey in web development began with a curiosity for how websites work, and it has evolved into a full-fledged career.
+                    I am a Full Stack Web Developer with a passion for creating dynamic and responsive web applications.
+                    My journey in web development began with a curiosity for how websites work, and it has evolved into a full-fledged career.
                 </p>
                 <p>
-                I have experience working with technologies like HTML, CSS, JavaScript, React, and Node.js.
-                I love solving challenges and learning continuously.
+                    I have experience working with technologies like HTML, CSS, JavaScript, React, and Node.js.
+                    I love solving challenges and learning continuously.
                 </p>
                 <p>
-                Outside of coding, I enjoy exploring new tools, contributing to open-source, and mentoring others in the tech community.
+                    Outside of coding, I enjoy exploring new tools, contributing to open-source, and mentoring others in the tech community.
                 </p>
-            </div>
+            </section>
 
-            <div class="photo">
-                <img src="../Asset/profile.JPG" alt="Profile Photo" />
-            </div>
+            <aside class="photo" aria-label="Profile photo of Vannak Seaklim">
+                <img src="../Asset/profile.JPG" alt="Profile photo of Vannak Seaklim" />
+            </aside>
         </main>
 
-        <footer class="footer">
-            <p>PORTOFOLIO 2026</p>
+        <footer class="footer" role="contentinfo">
+            <p>PORTFOLIO 2026 &copy;</p>
         </footer>
     </div>
 </body>
